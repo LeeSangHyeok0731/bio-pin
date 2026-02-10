@@ -57,7 +57,8 @@ function BiometricLoginButton() {
           },
           pubKeyCredParams: [{ type: "public-key", alg: -7 }],
           authenticatorSelection: {
-            residentKey: "required", // ⭐ 이게 패스키
+            authenticatorAttachment: "platform", // 💡 이 옵션이 Windows Hello(플랫폼 인증기)를 강제합니다
+            residentKey: "required",
             userVerification: "required",
           },
         },
