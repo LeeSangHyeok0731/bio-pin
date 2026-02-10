@@ -119,20 +119,12 @@ function BiometricLoginButton() {
   };
 
   return (
-    <div className="flex flex-col gap-4 w-full">
-      <button
-        onClick={handleRegister}
-        disabled={isLoading}
-        className="rounded-xl bg-green-600 px-6 py-3 text-white font-semibold"
-      >
+    <div className="flex flex-col gap-4">
+      <button onClick={handleRegister} disabled={isLoading}>
         패스키 등록
       </button>
 
-      <button
-        onClick={handleLogin}
-        disabled={isLoading}
-        className="rounded-xl bg-blue-600 px-6 py-3 text-white font-semibold"
-      >
+      <button onClick={handleLogin} disabled={isLoading}>
         패스키 로그인
       </button>
 
